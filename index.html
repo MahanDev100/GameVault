@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fa" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameVault | کشف، کاوش و مقایسهٔ بازی‌های ویدیویی</title>
+  <meta name="description" content="GameVault یک آرشیو گلچین‌شده برای کشف، فیلتر و مقایسهٔ بازی‌های ویدیویی در دوره‌ها، ژانرها و پلتفرم‌های مختلف است">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b2a5b'/%3E%3Crect x='6' y='8' width='20' height='16' rx='5' fill='none' stroke='%233fd9ff' stroke-width='2.4'/%3E%3Cpath d='M16 12v8M12 16h8' stroke='%233fd9ff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>try{var t=localStorage.getItem('gv-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="22" rx="7"/><circle cx="16" cy="16" r="6"/><path d="M16 12v8M12 16h8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></symbol>
+  <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+</svg>
+
+<a class="skip" href="#main">رفتن به محتوا</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#discover" aria-label="GameVault، بازگشت به ابتدای صفحه">
+      <svg class="ic logo" aria-hidden="true"><use href="#i-logo"/></svg>
+      <span class="wordmark">Game<span>Vault</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="منوی اصلی">
+      <a href="#discover">کشف</a>
+      <a href="#explore">کاوش</a>
+      <a href="#collections">مجموعه‌ها</a>
+      <a href="#compare">مقایسه</a>
+      <a href="#about">درباره</a>
+    </nav>
+    <div class="tools">
+      <button type="button" class="icon-btn" id="btn-search" aria-label="جستجوی بازی‌ها"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <button type="button" class="icon-btn fav-link" id="btn-favs" aria-label="علاقه‌مندی‌ها، ۰ مورد"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><span class="count" id="fav-count">۰</span></button>
+      <button type="button" class="icon-btn" id="btn-theme" aria-label="تغییر به تم روشن" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg></button>
+      <button type="button" class="icon-btn menu-btn" id="btn-menu" aria-label="باز کردن منو" aria-expanded="false" aria-controls="site-nav"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-dark pal-navy" id="discover" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">آرشیو گلچین‌شده بازی</p>
+        <h1 id="hero-title"><span class="glow-text">دنیای بعدی</span> منتظر توست</h1>
+        <p class="lead">بازی‌های برجسته را بر اساس ژانر، پلتفرم و دوره پیدا کنید، کنار هم مقایسه کنید و علاقه‌مندی‌هایتان را نزدیک نگه دارید</p>
+        <form class="hero-search" id="hero-search" role="search">
+          <label class="sr" for="hero-q">جستجوی بازی‌ها</label>
+          <input id="hero-q" type="search" placeholder="جستجو بر اساس عنوان، ژانر یا پلتفرم" autocomplete="off">
+          <button type="submit" class="btn primary">جستجو</button>
+        </form>
+        <div class="cta">
+          <a class="btn primary" href="#explore">کاوش بازی‌ها <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn ghost" href="#collections">مشاهدهٔ مجموعه‌ها</a>
+        </div>
+        <dl class="stats">
+          <div><dt>بازی</dt><dd data-stat="games">0</dd></div>
+          <div><dt>ژانر</dt><dd data-stat="genres">0</dd></div>
+          <div><dt>خانوادهٔ پلتفرم</dt><dd data-stat="platforms">0</dd></div>
+        </dl>
+      </div>
+      <div class="hero-art">
+        <div class="layer l1" aria-hidden="true"></div>
+        <div class="layer l2" aria-hidden="true"></div>
+        <div id="hero-feature"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured on-dark" id="featured" aria-labelledby="featured-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">پرطرفدار</p>
+        <h2 id="featured-title">ویژه و پرطرفدار</h2>
+        <p>ترکیبی دست‌چین‌شده از عناوین شاخص و محبوب‌های کمتر دیده‌شده</p>
+      </div>
+      <div class="feat-grid" id="feat-grid"></div>
+    </div>
+  </section>
+
+  <section class="explore" id="explore" aria-labelledby="explore-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">آرشیو</p>
+        <h2 id="explore-title">کاوش در آرشیو</h2>
+        <p>کل فهرست را جستجو، فیلتر و مرتب کنید نتایج فوراً به‌روز می‌شوند</p>
+      </div>
+      <form class="filters" id="filters" role="search" aria-label="فیلتر بازی‌ها" autocomplete="off">
+        <div class="field wide"><label for="f-q">جستجو</label><input id="f-q" type="search" placeholder="عنوان، ژانر، پلتفرم یا تگ"></div>
+        <div class="field"><label for="f-genre">ژانر</label><select id="f-genre"></select></div>
+        <div class="field"><label for="f-platform">پلتفرم</label><select id="f-platform"></select></div>
+        <div class="field"><label for="f-era">دورهٔ انتشار</label><select id="f-era"></select></div>
+        <div class="field"><label for="f-tag">تگ</label><select id="f-tag"></select></div>
+        <div class="field"><label for="f-sort">مرتب‌سازی</label><select id="f-sort"></select></div>
+        <label class="check"><input type="checkbox" id="f-fav"> فقط علاقه‌مندی‌ها</label>
+      </form>
+      <div class="results-bar">
+        <p class="count-text" id="result-count" role="status" aria-live="polite"></p>
+        <button type="button" class="btn small" id="clear-filters">پاک‌کردن فیلترها</button>
+      </div>
+      <p class="note">علاقه‌مندی‌ها فقط در همین مرورگر ذخیره می‌شوند و بین دستگاه‌ها همگام نمی‌شوند</p>
+      <div class="grid" id="catalog"></div>
+      <div class="empty" id="empty" hidden>
+        <h3>بازی‌ای پیدا نشد</h3>
+        <p id="empty-text">جستجوی دیگری امتحان کنید یا فیلترها را کمتر کنید</p>
+        <button type="button" class="btn" id="empty-clear">پاک‌کردن فیلترها</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections" id="collections" aria-labelledby="coll-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">مجموعه‌های سردبیری</p>
+        <h2 id="coll-title">مجموعه‌ها</h2>
+        <p>از یک حال‌وهوا شروع کنید هر مجموعه آرشیو را با فیلتر مناسب باز می‌کند</p>
+      </div>
+      <div class="coll-grid" id="coll-grid"></div>
+    </div>
+  </section>
+
+  <section class="compare pal-slate" id="compare" aria-labelledby="cmp-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">کنار هم</p>
+        <h2 id="cmp-title">مقایسهٔ دو بازی</h2>
+        <p>هر دو بازی را انتخاب کنید تا مقایسه‌شان را ببینید امتیازها سردبیری‌اند و بیانگر سلیقه‌اند، نه برنده</p>
+      </div>
+      <div class="cmp-pick">
+        <div class="field"><label for="cmp-a">بازی اول</label><select id="cmp-a"></select></div>
+        <div class="field"><label for="cmp-b">بازی دوم</label><select id="cmp-b"></select></div>
+        <button type="button" class="btn" id="cmp-reset">بازنشانی مقایسه</button>
+      </div>
+      <div class="cmp-out" id="cmp-out" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">دربارهٔ GameVault</p>
+        <h2 id="about-title">یک گنجینه، نه سیل بی‌پایان</h2>
+        <p>آرشیوی گلچین‌شده برای کشف بازی: GameVault به‌جای یک پایگاه‌داده بی‌پایان، فهرستی متمرکز از بازی‌های شناخته‌شده نگه می‌دارد و ابزار فیلتر، مقایسه و ذخیرهٔ مهم‌ترین‌ها را به شما می‌دهد</p>
+        <p>هر امتیازی در این سایت یک <strong>امتیاز سردبیری GameVault</strong> است این یک رتبهٔ محلی ساده برای مرتب‌سازی و مقایسه است، نه امتیاز رسمی هیچ ناشر یا منتقدی</p>
+      </div>
+      <ul class="principles">
+        <li><strong>گلچین‌شده، نه شلوغ</strong><span>مجموعه‌ای متمرکز از بازی‌ها در دوره‌ها، ژانرها و پلتفرم‌های مختلف</span></li>
+        <li><strong>امتیازهای شفاف</strong><span>رتبه‌های سردبیری که شفاف برچسب خورده‌اند و هرگز رسمی معرفی نمی‌شوند</span></li>
+        <li><strong>حریم خصوصی در طراحی</strong><span>بدون حساب کاربری علاقه‌مندی‌ها در مرورگر خودتان می‌مانند</span></li>
+        <li><strong>همه‌جا کار می‌کند</strong><span>کاملاً در مرورگر اجرا می‌شود و به سرویس خارجی نیاز ندارد</span></li>
+      </ul>
+    </div>
+  </section>
+
+  
+<section class="creators-section" id="creators">
+    <div class="creators-heading">
+        <span class="section-label">THE PEOPLE BEHIND GAMEVAULT</span>
+        <h2>Creators</h2>
+        <p>تیم ساخت پروژه : </p>
+    </div>
+
+    <div class="creators-grid">
+        <article class="creator-card">
+            <div class="creator-avatar">
+                <img src="assets/images/creators/creator-1.jpg" alt="Creator 1">
+            </div>
+            <h3>ماهان نوادری</h3>
+            <p class="creator-role">Founder & Developer</p>
+            <p class="creator-bio">Building the GameVault experience</p>
+        </article>
+
+        <article class="creator-card">
+            <div class="creator-avatar">
+                <img src="assets/images/creators/creator-2.jpg" alt="Creator 2">
+            </div>
+            <h3>کارن عشق آبادی</h3>
+            <p class="creator-role">Developer</p>
+            <p class="creator-bio">Turning ideas into reality</p>
+        </article>
+
+        <article class="creator-card">
+            <div class="creator-avatar">
+                <img src="assets/images/creators/creator-3.jpg" alt="Creator 3">
+            </div>
+            <h3>حمید نجفی</h3>
+            <p class="creator-role">UI/UX Designer</p>
+            <p class="creator-bio">Designing the GameVault interface</p>
+        </article>
+
+        <article class="creator-card">
+            <div class="creator-avatar">
+                <img src="assets/images/creators/creator-4.jpg" alt="Creator 4">
+            </div>
+            <h3>امیرپارسا عربی</h3>
+            <p class="creator-role">Game Researcher</p>
+            <p class="creator-bio">Discovering games worth playing</p>
+        </article>
+
+        <article class="creator-card">
+            <div class="creator-avatar">
+                <img src="assets/images/creators/creator-5.jpg" alt="Creator 5">
+            </div>
+            <h3>عرشیا ثابت</h3>
+            <p class="creator-role">Content Creator</p>
+            <p class="creator-bio">Bringing gaming stories to life</p>
+        </article>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="wrap foot">
+    <div>
+      <p class="wordmark">Game<span>Vault</span></p>
+      <p class="foot-line">آرشیوی گلچین‌شده برای کشف و مقایسهٔ بازی‌های ویدیویی</p>
+    </div>
+    <nav aria-label="پیوندهای پایین صفحه">
+      <a href="#discover">کشف</a>
+      <a href="#explore">کاوش</a>
+      <a href="#collections">مجموعه‌ها</a>
+      <a href="#compare">مقایسه</a>
+      <a href="#about">درباره</a>
+      <a href="#team">سازندگان</a>
+    </nav>
+    <a class="btn small" href="#top"><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg> بازگشت به بالا</a>
+  </div>
+  <p class="wrap copy">پروژهٔ دانش‌آموزی &mdash; GameVault</p>
+</footer>
+
+<dialog id="game-dialog" aria-labelledby="dlg-title"><div id="dlg-body"></div></dialog>
+
+<script src="assets/js/games-data.js"></script>
+<script src="assets/js/team-data.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+<div class="music-player">
+    <button id="music-toggle" aria-label="Play background music">
+        <span id="music-icon">▶</span>
+    </button>
+
+    <div class="music-info">
+        <span class="music-title">The Last of Us</span>
+        <span class="music-subtitle">Background Soundtrack</span>
+    </div>
+
+    <button id="music-volume" aria-label="Toggle mute">🔊</button>
+
+    <audio id="background-music" loop preload="auto">
+    <source
+        src="assets/audio/Gustavo%20Santaolalla%20-%20The%20Last%20of%20Us%20-%20musicgeek.ir.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+</div>
+
+
+<!-- JavaScript Music Player -->
+<script>
+    const music = document.getElementById("background-music");
+    const toggleButton = document.getElementById("music-toggle");
+    const musicIcon = document.getElementById("music-icon");
+    const volumeButton = document.getElementById("music-volume");
+
+    music.volume = 0.25;
+
+    function updateMusicButton() {
+        musicIcon.textContent = music.paused ? "▶" : "Ⅱ";
+        toggleButton.setAttribute(
+            "aria-label",
+            music.paused ? "Play background music" : "Pause background music"
+        );
+    }
+
+    async function playMusic() {
+        try {
+            await music.play();
+            updateMusicButton();
+        } catch (error) {
+            updateMusicButton();
+            console.log("Autoplay was blocked. User interaction is required.");
+        }
+    }
+
+    toggleButton.addEventListener("click", async () => {
+        if (music.paused) {
+            await playMusic();
+        } else {
+            music.pause();
+            updateMusicButton();
+        }
+    });
+
+    volumeButton.addEventListener("click", () => {
+        music.muted = !music.muted;
+        volumeButton.textContent = music.muted ? "🔇" : "🔊";
+    });
+
+    music.addEventListener("play", updateMusicButton);
+    music.addEventListener("pause", updateMusicButton);
+
+    window.addEventListener("load", playMusic);
+</script>
+
+</body>
+</html>
+</body>
+</html>
