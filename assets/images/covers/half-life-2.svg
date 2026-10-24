@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Half-Life 2 cover artwork">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#321b13"/><stop offset="1" stop-color="#bd6b2e"/></linearGradient><radialGradient id="glow"><stop offset="0" stop-color="#f2c67a" stop-opacity=".75"/><stop offset="1" stop-color="#f2c67a" stop-opacity="0"/></radialGradient></defs>
+<rect width="600" height="800" fill="url(#bg)"/><circle cx="187" cy="182" r="260" fill="url(#glow)"/>
+<path d="M0 570 L170 330 L290 485 L430 245 L600 470 V800 H0Z" fill="#071019" opacity=".5"/>
+<path d="M0 660 L160 510 L270 590 L430 430 L600 570 V800 H0Z" fill="#bd6b2e" opacity=".55"/>
+<g fill="none" stroke="#f2c67a" stroke-opacity=".48"><circle cx="450" cy="160" r="92" stroke-width="2"/><circle cx="450" cy="160" r="122" stroke-width="1"/><path d="M0 160 H600 M0 190 H600 M300 0 V800" stroke-opacity=".13"/></g>
+<text x="42" y="95" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="7" fill="#f2c67a">GAMEVAULT</text>
+<text x="34" y="590" font-family="Arial,sans-serif" font-size="112" font-weight="900" fill="#ffffff" fill-opacity=".20">HL2</text>
+<rect x="34" y="625" width="70" height="5" rx="2" fill="#f2c67a"/>
+<text x="34" y="680" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#ffffff">Half-Life 2</text>
+<text x="36" y="735" font-family="Arial,sans-serif" font-size="15" letter-spacing="5" fill="#f2c67a">LOCAL COVER BACKUP</text>
+</svg>
